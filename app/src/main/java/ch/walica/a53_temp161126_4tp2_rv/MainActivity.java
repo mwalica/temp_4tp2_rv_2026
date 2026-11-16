@@ -11,10 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import ch.walica.a53_temp161126_4tp2_rv.model.Person;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private FloatingActionButton fabAdd;
+    private List<Person> people = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         fabAdd = findViewById(R.id.fabAdd);
+
+        people.add(new Person("Jan"));
+        people.add(new Person("Adam"));
+        people.add(new Person("Gustaw"));
+        people.add(new Person("Karol"));
     }
 }
